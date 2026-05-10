@@ -4,7 +4,7 @@ public class Enemy {
     double auraGU;
 
     public Enemy(){
-        this.hp = 200;
+        this.hp = 15000;
         this.auraElement = "";
         this.auraGU = 0.0;
     }
@@ -23,7 +23,7 @@ public class Enemy {
     }
 
     public void printStats(){
-        System.out.println("Ruin Guard: " + hp + "/200 HP" + " | Aura Element: " + auraElement + " | Aura GU: " + auraGU);
+        System.out.println("Ruin Guard: " + hp + "/15000 HP" + " | Aura Element: " + auraElement + " | Aura GU: " + auraGU);
     }
 
 }

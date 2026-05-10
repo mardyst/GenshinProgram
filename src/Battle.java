@@ -31,8 +31,8 @@ public class Battle {
     public void hpBar(String name, int currentHP, int maxHP){
         System.out.print(name + " HP: [");
 
-        int blackSquare = currentHP / 10; // this gets how many squares need to be filled
-        int whiteSquare = (maxHP - currentHP) / 10; // this gets how many squares are empty
+        int blackSquare = currentHP * 10 / maxHP; // this gets how many squares need to be filled
+        int whiteSquare = 10 - blackSquare; // this gets how many squares are empty
 
         for(int i = 0; i < blackSquare; i++){
             System.out.print("■");
@@ -51,7 +51,7 @@ public class Battle {
         c1.printStats();
         c2.printStats();
         hpBar("Player", playerHP, 100);
-        hpBar("Ruin Guard", ruinGuard.hp, 200);
+        hpBar("Ruin Guard", ruinGuard.hp, 15000);
         System.out.print("Current Aura: " + ruinGuard.getAura() + " \n");
 
     }
